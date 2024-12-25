@@ -1,1 +1,2 @@
-
+## Clockwise circular loader
+View: <a href="https://ahmed.sial.github.io/front-end-projects/index.html">Circular Loader</a>
