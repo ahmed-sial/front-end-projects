@@ -1,0 +1,43 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--circumference-of-circle: 502;
+	--neg-circumference-of-circle: -502;
+}
+body {
+	height: 100vh;
+	width: 100vw;
+	border: 1px solid black;
+}
+.container {
+	height: 100%;
+	width: 100%;
+	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+svg {
+	height: 200px;
+	width: 200px;
+}
+circle {
+	animation: circular-show 2.5s ease-in-out infinite;
+}
+@keyframes circular-show {
+	0% {
+		stroke-dashoffset: 0;
+		stroke-dasharray: 10, var(--circumference-of-circle);
+	}
+	50% {
+		stroke-dashoffset: -250;
+		stroke-dasharray: 170, var(--circumference-of-circle);
+	}
+	100% {
+		stroke-dasharray: 170, var(--circumference-of-circle);
+		stroke-dashoffset: var(--neg-circumference-of-circle);
+	}
+}
